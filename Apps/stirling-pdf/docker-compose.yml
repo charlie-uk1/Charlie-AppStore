@@ -19,7 +19,7 @@ services:
       # Set to true to download security jar (required for authentication login)
       - DOCKER_ENABLE_SECURITY=false
       # Set to true to enable login for authentication
-      - SECURITY_ENABLE_LOGIN=true
+      - SECURITY_ENABLE_LOGIN=false
       # Set the initial admin username
       - SECURITY_INITIALLOGIN_USERNAME=charlie
       # Set the initial admin password
