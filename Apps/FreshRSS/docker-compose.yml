@@ -5,7 +5,7 @@ services:
     environment:
       TZ: ""
       CRON_MIN: "1,31"
-    image: freshrss/freshrss:1.27.1
+    image: freshrss/freshrss:latest
     network_mode: bridge
     ports:
       - target: 80
