@@ -1,4 +1,4 @@
-tname: uptime-kuma
+name: uptime-kuma
 services:
   uptime-kuma:
     image: louislam/uptime-kuma:next
@@ -30,7 +30,7 @@ x-casaos:
   description:
     en_us: "A fancy self-hosted monitoring tool that tracks uptime for websites, services, and Docker containers."
   developer: Louis Lam
-  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/uptime-kuma.png
+  icon: https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg
   tagline:
     en_us: "Self-hosted uptime monitoring."
   title:
