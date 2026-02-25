@@ -65,7 +65,7 @@ x-casaos:
   tagline:
     en_us: Stirling PDF - Local hosted web based PDF editor
   developer: stirlingtools
-  icon: https://i.ibb.co/JPbk3qW/stirling-pdf.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/stirling-pdf.png
   thumbnail: ""
   title:
     en_us: Stirling-PDF
