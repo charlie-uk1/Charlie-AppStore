@@ -6,9 +6,6 @@ services:
     restart: always
     ports:
       - "8085:8080"
-    depends_on:
-      - mariadb
-      - redis
     environment:
       - OWNCLOUD_DOMAIN=192.168.68.120:8085
       - OWNCLOUD_TRUSTED_DOMAINS=192.168.68.120
@@ -19,20 +16,8 @@ services:
       - OWNCLOUD_DB_HOST=mariadb
       - OWNCLOUD_ADMIN_USERNAME=admin
       - OWNCLOUD_ADMIN_PASSWORD=admin
-      - OWNCLOUD_REDIS_ENABLED=true
-      - OWNCLOUD_REDIS_HOST=redis
     volumes:
       - /DATA/AppData/owncloud/data:/mnt/data
-    x-casaos:
-      ports:
-        - container: "8085"
-          description:
-            en_us: "Web Interface"
-      volumes:
-        - container: /mnt/data
-          description:
-            en_us: "OwnCloud Data"
-
   mariadb:
     image: mariadb:10.11
     container_name: owncloud-db
@@ -44,26 +29,15 @@ services:
       - MYSQL_DATABASE=owncloud
     volumes:
       - /DATA/AppData/owncloud/mysql:/var/lib/mysql
-
   redis:
     image: redis:6-alpine
     container_name: owncloud-redis
     restart: always
     volumes:
       - /DATA/AppData/owncloud/redis:/data
-
 x-casaos:
-  architectures:
-    - amd64
-    - arm64
-  main: owncloud
-  author: ownCloud Team
+  author: ownCloud
   category: Charlie
-  description:
-    en_us: "Classic ownCloud 10 for file sync and sharing. Reliable and well-supported by mobile apps."
-  developer: ownCloud GmbH
-  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/owncloud.png
-    en_us: "Secure file sync and share."
+  main: owncloud
   title:
     en_us: ownCloud
-  port_map: "8085"
