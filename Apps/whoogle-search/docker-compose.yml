@@ -1,3 +1,4 @@
+name: whoogle-search
 services:
   whoogle-search:
     image: benbusby/whoogle-search:latest
@@ -46,7 +47,6 @@ services:
 x-casaos:
   architectures:
     - amd64
-    - arm64
   main: whoogle-search
   description:
     en_us: Whoogle - A self-hosted, ad-free, privacy-respecting metasearch engine
@@ -58,4 +58,4 @@ x-casaos:
   title:
     en_us: Whoogle
   category: Charlie
-  port_map: "9005"
+  port_map: "5000"
