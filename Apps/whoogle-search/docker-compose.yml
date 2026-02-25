@@ -1,4 +1,4 @@
-name: whoogle-search
+name: whoogle-search2
 services:
   whoogle-search:
     container_name: whoogle
