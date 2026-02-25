@@ -21,6 +21,6 @@ x-casaos:
   description:
     en_us: A collection of essential tools for everyday tasks, including PDF editing, image conversion, video trimming, and text formatting. Everything runs locally in your browser.
   developer: iib0011
-  icon: https://i.ibb.co/nWWKB9R/Omni-Tools.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/omni-tools.png
   category: Charlie
   port_map: "8678"
