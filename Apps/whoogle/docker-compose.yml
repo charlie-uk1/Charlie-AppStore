@@ -34,15 +34,21 @@ services:
     network_mode: bridge
     privileged: false
 x-casaos:
-  author: Charlie
-  category: Charlie
-  hostname: ""
+  architectures:
+    - amd64
+    - arm64
+  main: whoogle
+  description:
+    en_us: Whoogle - A self-hosted, ad-free, privacy-respecting metasearch engine
+  tagline:
+    en_us: Whoogle - A self-hosted, ad-free, privacy-respecting metasearch engine
+  developer: Ben Busby
   icon: https://i.ibb.co/M7MkCPQ/whoogle.png
-  index: /
-  is_uncontrolled: false
+  thumbnail: ""
+  title:
+    en_us: Whoogle
+  category: Charlie
   port_map: "9005"
-  scheme: http
-  store_app_id: whoogle-search
   title:
     custom: ""
     en_us: whoogle-search
