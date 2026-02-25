@@ -5,7 +5,7 @@ services:
     image: danielszabo99/microbin:latest
     restart: unless-stopped
     ports:
-      - 8080:8070
+      - 9010:8080
     environment:
       - MICROBIN_ADMIN_USERNAME=charlie
       - MICROBIN_ADMIN_PASSWORD=charlie
@@ -26,8 +26,8 @@ x-casaos:
   tagline:
     en_us: A tiny, self-hosted, feature-rich pastebin.
   description:
-    en_us: MicroBin is a super tiny, configurable, self-contained pastebin web app. It supports file uploads, URL shortening, QR codes, and syntax highlighting with almost zero resource usage.
+    en_us: MicroBin is a super tiny, configurable, self-contained pastebin web app. It supports file uploads, URL shortening, and syntax highlighting.
   developer: Daniel Szabo
   icon: https://microbin.eu/logo.png
   category: Charlie
-  port_map: "8070"
+  port_map: "9010"
