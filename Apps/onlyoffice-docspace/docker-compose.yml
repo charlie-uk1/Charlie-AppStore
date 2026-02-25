@@ -25,6 +25,6 @@ x-casaos:
   tagline:
     en_us: Full Office Room & File Management System.
   developer: ONLYOFFICE
-  icon: https://www.onlyoffice.com/blog/wp-content/uploads/2023/04/DocSpace_logo_1.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/onlyoffice.png
   category: Charlie
   port_map: "9020"
