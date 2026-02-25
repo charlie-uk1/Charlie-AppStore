@@ -35,19 +35,19 @@ services:
     restart: always
     volumes:
       - /DATA/AppData/owncloud/redis:/data
-  x-casaos:
-    architectures:
-      - amd64
-      - arm64
-    main: owncloud
-    author: ownCloud Team
-    category: Charlie
-    description:
-      en_us: "Classic ownCloud 10 for file sync and sharing. Reliable and well-supported by mobile apps."
-    developer: ownCloud GmbH
-    icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/owncloud.png
-    tagline:
-      en_us: "Secure file sync and share."
-    title:
-      en_us: ownCloud
-    port_map: "8085"
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: owncloud
+  author: ownCloud Team
+  category: Charlie
+  description:
+    en_us: "Classic ownCloud 10 for file sync and sharing. Reliable and well-supported by mobile apps."
+  developer: ownCloud GmbH
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/owncloud.png
+  tagline:
+    en_us: "Secure file sync and share."
+  title:
+    en_us: ownCloud
+  port_map: "8085"
