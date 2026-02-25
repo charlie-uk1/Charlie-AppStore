@@ -35,7 +35,7 @@ services:
     privileged: false
 x-casaos:
   author: Charlie
-  category: charlie
+  category: Charlie
   hostname: ""
   icon: https://i.ibb.co/M7MkCPQ/whoogle.png
   index: /
@@ -45,4 +45,4 @@ x-casaos:
   store_app_id: whoogle-search
   title:
     custom: ""
-    en_gb: whoogle-search
+    en_us: whoogle-search
