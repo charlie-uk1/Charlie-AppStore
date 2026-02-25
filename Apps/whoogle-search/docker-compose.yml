@@ -53,7 +53,7 @@ x-casaos:
   tagline:
     en_us: Whoogle - A self-hosted, ad-free, privacy-respecting metasearch engine
   developer: Ben Busby
-  icon: https://i.ibb.co/M7MkCPQ/whoogle.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/whoogle.png
   thumbnail: ""
   title:
     en_us: Whoogle
