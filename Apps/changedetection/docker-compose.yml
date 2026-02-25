@@ -6,12 +6,12 @@ services:
     environment:
       - PUID=0
       - PGID=0
-      - TZ=Etc/UTC # Change to your timezone, e.g., Europe/London
+      - TZ=Etc/UTC
       - PLAYWRIGHT_DRIVER_URL=ws://playwright-chrome:3000
     volumes:
       - /DATA/AppData/changedetection/config:/config
     ports:
-      - 5000:5000
+      - 5005:5000 # Map Host 5005 to Container 5000
     restart: unless-stopped
     depends_on:
       - playwright-chrome
@@ -21,7 +21,7 @@ services:
           description:
             en_us: "Timezone for the container"
       ports:
-        - container: "5000"
+        - container: "5005"
           description:
             en_us: "Web Interface"
       volumes:
@@ -53,3 +53,4 @@ x-casaos:
     en_us: "Monitor any website for changes and get notified."
   title:
     en_us: ChangeDetection
+  port_map: "5005"
