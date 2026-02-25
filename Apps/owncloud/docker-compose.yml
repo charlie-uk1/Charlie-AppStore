@@ -36,6 +36,9 @@ services:
     volumes:
       - /DATA/AppData/owncloud/redis:/data
 x-casaos:
+  architectures:
+      - amd64
+      - arm64
   author: ownCloud
   category: Charlie
   main: owncloud
