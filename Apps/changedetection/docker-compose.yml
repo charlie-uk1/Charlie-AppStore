@@ -44,11 +44,11 @@ x-casaos:
     - arm64
   main: changedetection
   author: dgtlmoon
-  category: Automation
+  category: Charlie
   description:
     en_us: "Self-hosted tool for staying up-to-date with website content changes."
   developer: ChangeDetection.io
-  icon: https://raw.githubusercontent.com/dgtlmoon/changedetection.io/master/changedetectionio/static/images/logo-256.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/changedetection.png
   tagline:
     en_us: "Monitor any website for changes and get notified."
   title:
