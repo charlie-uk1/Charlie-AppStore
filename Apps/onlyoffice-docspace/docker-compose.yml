@@ -1,0 +1,31 @@
+name: onlyoffice-docspace
+services:
+  docspace:
+    container_name: onlyoffice-docspace
+    image: onlyoffice/docspace:latest
+    restart: unless-stopped
+    ports:
+      - 9020:80
+      - 9021:443
+    environment:
+      - JWT_ENABLED=true
+      - JWT_SECRET=charlie_secret_key_789
+    volumes:
+      - /DATA/AppData/$AppID/data:/var/www/onlyoffice/Data
+      - /DATA/AppData/$AppID/logs:/var/log/onlyoffice
+      - /DATA/AppData/$AppID/mysql:/var/lib/mysql
+
+x-casaos:
+  architectures:
+    - amd64
+  main: onlyoffice-docspace
+  title:
+    en_us: ONLYOFFICE DocSpace
+  tagline:
+    en_us: Full Office Room & File Management System.
+  description:
+    en_us: A complete document collaboration platform. Unlike Docs, DocSpace includes a file manager, user accounts, and "rooms" to organize your work. Perfect for standalone use without Nextcloud.
+  developer: ONLYOFFICE
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/onlyoffice.png
+  category: Charlie
+  port_map: "9020"
