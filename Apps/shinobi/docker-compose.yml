@@ -40,7 +40,7 @@ x-casaos:
   description:
     en_us: "Open-source, high-performance NVR solution. Supports motion detection, recording, and streaming."
   developer: Moe Alam
-  icon: https://cdn.shinobi.video/img/logo.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/shinobi.png
   tagline:
     en_us: "Professional CCTV and NVR software."
   title:
