@@ -1,8 +1,9 @@
 name: docspace
 services:
-  docspace-app: # This is the service name
+  docspace-app:
     container_name: docspace-app
-    image: onlyoffice/docspace:latest
+    # Forced global registry to avoid the "Mainland China" mirror error
+    image: docker.io/onlyoffice/docspace:latest
     restart: unless-stopped
     ports:
       - 9020:80
@@ -18,14 +19,12 @@ services:
 x-casaos:
   architectures:
     - amd64
-  main: docspace-app # This MUST match the service name above exactly
+  main: docspace-app
   title:
     en_us: ONLYOFFICE DocSpace
   tagline:
     en_us: Full Office Room & File Management System.
-  description:
-    en_us: A complete document collaboration platform. Unlike Docs, DocSpace includes a file manager, user accounts, and rooms.
   developer: ONLYOFFICE
-  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/onlyoffice.png
+  icon: https://www.onlyoffice.com/blog/wp-content/uploads/2023/04/DocSpace_logo_1.png
   category: Charlie
   port_map: "9020"
