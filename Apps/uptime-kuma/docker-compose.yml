@@ -30,7 +30,7 @@ x-casaos:
   description:
     en_us: "A fancy self-hosted monitoring tool that tracks uptime for websites, services, and Docker containers."
   developer: Louis Lam
-  icon: https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/uptime-kuma.png
   tagline:
     en_us: "Self-hosted uptime monitoring."
   title:
