@@ -26,6 +26,6 @@ x-casaos:
   description:
     en_us: Homebox is the inventory management system focused on simplicity and ease of use. Track your tools, electronics, and household items with ease.
   developer: Hay-Kot
-  icon: https://raw.githubusercontent.com/hay-kot/homebox/main/static/img/favicon.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/homebox.png
   category: Charlie
   port_map: "3100"
