@@ -1,0 +1,58 @@
+name: logseq
+services:
+  logseq:
+    container_name: logseq
+    image: correctroad/logseq:latest
+    environment:
+      PGID: "0"
+      PUID: "0"
+    deploy:
+      resources:
+        reservations:
+          memory: 64M
+    network_mode: bridge
+    ports:
+      - target: 3000
+        published: "3325"
+        protocol: tcp   
+      - target: 12315
+        published: "12315"
+        protocol: tcp
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/logseq/config
+        target: /config
+      - type: bind
+        source: /DATA/Documents/Notes
+        target: /notes
+    x-casaos:
+      ports:
+        - container: "3325"
+          description:
+            en_us: "Web Interface"
+      volumes:
+        - container: /config
+          description:
+            en_us: "Configuration"
+        - container: /notes
+          description:
+            en_us: "Notes Directory"
+
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: logseq
+  author: CasaOS Team
+  category: Charlie
+  description:
+    en_us: "A privacy-first, open-source platform for knowledge management and collaboration."
+  developer: Logseq Team
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/logseq.png
+  tagline:
+    en_us: "Privacy-first knowledge management."
+  title:
+    en_us: Logseq
+  port_map: "3325"
