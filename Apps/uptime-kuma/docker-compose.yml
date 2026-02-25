@@ -34,5 +34,5 @@ x-casaos:
   tagline:
     en_us: "Self-hosted uptime monitoring."
   title:
-    en_us: Uptime Kuma
+    en_us: Uptime Kuma (Latest)
   port_map: "3001"
