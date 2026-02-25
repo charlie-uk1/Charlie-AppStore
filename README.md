@@ -1,4 +1,4 @@
-# Charlie AppStore
+# Charlie's ZimaOS/CasaOS AppStore
 
 It works great for me, but mileage may vary.
 
