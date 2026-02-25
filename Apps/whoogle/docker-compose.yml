@@ -1,54 +1,42 @@
 name: whoogle-search
 services:
   whoogle-search:
-    cap_drop:
-      - ALL
-    cpu_shares: 90
-    command: []
     container_name: whoogle
-    deploy:
-      resources:
-        limits:
-          memory: 8146374656
-        reservations:
-          devices: []
     image: benbusby/whoogle-search:latest
-    labels:
-      icon: https://i.ibb.co/M7MkCPQ/whoogle.png
+    restart: unless-stopped
+    network_mode: bridge
     ports:
       - target: 5000
         published: "9005"
         protocol: tcp
-    restart: unless-stopped
+    cap_drop:
+      - ALL
     security_opt:
       - no-new-privileges
+    user: whoogle
     tmpfs:
       - /config/:size=10M,uid=927,gid=927,mode=1700
       - /var/lib/tor/:size=15M,uid=927,gid=927,mode=1700
       - /run/tor/:size=1M,uid=927,gid=927,mode=1700
-    user: whoogle
-    volumes: []
-    devices: []
-    cap_add: []
-    environment: []
-    network_mode: bridge
-    privileged: false
+    deploy:
+      resources:
+        limits:
+          memory: 8146374656
+    labels:
+      icon: https://i.ibb.co/M7MkCPQ/whoogle.png
+
 x-casaos:
   architectures:
     - amd64
     - arm64
-  main: whoogle
-  description:
-    en_us: Whoogle - A self-hosted, ad-free, privacy-respecting metasearch engine
+  main: whoogle-search
+  title:
+    en_us: Whoogle Search
   tagline:
-    en_us: Whoogle - A self-hosted, ad-free, privacy-respecting metasearch engine
+    en_us: Privacy-respecting metasearch engine
+  description:
+    en_us: A self-hosted, ad-free, privacy-respecting metasearch engine.
   developer: Ben Busby
   icon: https://i.ibb.co/M7MkCPQ/whoogle.png
-  thumbnail: ""
-  title:
-    en_us: Whoogle
   category: Charlie
   port_map: "9005"
-  title:
-    custom: ""
-    en_us: whoogle-search
