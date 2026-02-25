@@ -1,0 +1,33 @@
+name: onlyoffice-docs
+services:
+  onlyoffice-docs:
+    container_name: onlyoffice-docs
+    image: onlyoffice/documentserver:latest
+    restart: unless-stopped
+    ports:
+      - 9020:80
+    environment:
+      - JWT_ENABLED=true
+      - JWT_SECRET=charlie_secret_key_789
+      - JWT_HEADER=Authorization
+    volumes:
+      - /DATA/AppData/$AppID/data:/var/www/onlyoffice/Data
+      - /DATA/AppData/$AppID/logs:/var/log/onlyoffice
+      - /DATA/AppData/$AppID/lib:/var/lib/onlyoffice
+      - /DATA/AppData/$AppID/db:/var/lib/postgresql
+
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: onlyoffice-docs
+  title:
+    en_us: ONLYOFFICE Docs
+  tagline:
+    en_us: Powerful online office suite for documents, spreadsheets, and slides.
+  description:
+    en_us: ONLYOFFICE Docs is a highly compatible online office suite. Use this as a backend for Nextcloud, Seafile, or other platforms to edit Office documents directly in your browser.
+  developer: ONLYOFFICE
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/onlyoffice.png
+  category: Charlie
+  port_map: "9020"
