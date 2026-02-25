@@ -28,6 +28,6 @@ x-casaos:
   description:
     en_us: MicroBin is a super tiny, configurable, self-contained pastebin web app. It supports file uploads, URL shortening, and syntax highlighting.
   developer: Daniel Szabo
-  icon: https://microbin.eu/logo.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/microbin.png
   category: Charlie
   port_map: "9010"
