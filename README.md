@@ -1,5 +1,5 @@
 # Charlie AppStore
 
-A work in progress - DO NOT USE
+It works great for me, but mileage may very.
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
