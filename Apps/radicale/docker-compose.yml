@@ -1,30 +1,26 @@
 name: radicale
 services:
   radicale:
-    image: tomsun/radicale:latest
+    image: ghcr.io/kozea/radicale:stable
     container_name: radicale
-    restart: unless-stopped
     ports:
-      - "5232:5232"
-    environment:
-      - PUID=0
-      - PGID=0
-      - TZ=Etc/UTC # Change to your timezone
+      - 5232:5232
     volumes:
-      - /DATA/AppData/radicale/data:/data
       - /DATA/AppData/radicale/config:/etc/radicale
+      - /DATA/AppData/radicale/data:/var/lib/radicale
+    restart: unless-stopped
     x-casaos:
       ports:
         - container: "5232"
           description:
-            en_us: "Web Interface (CalDAV/CardDAV)"
+            en_us: "Web Interface"
       volumes:
-        - container: /data
-          description:
-            en_us: "Calendar and Contact Data"
         - container: /etc/radicale
           description:
-            en_us: "Configuration Files"
+            en_us: "Configuration"
+        - container: /var/lib/radicale
+          description:
+            en_us: "Calendar/Contact Data"
 
 x-casaos:
   architectures:
@@ -34,11 +30,11 @@ x-casaos:
   author: Kozea
   category: Charlie
   description:
-    en_us: "A lightweight CalDAV (calendar) and CardDAV (contact) server. Simple to use and compatible with most phones and computers."
+    en_us: "A lightweight CalDAV and CardDAV server for your calendars and contacts."
   developer: Radicale Team
   icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/radicale.png
   tagline:
-    en_us: "Simple CalDAV and CardDAV server."
+    en_us: "Simple Calendar & Contact Sync."
   title:
     en_us: Radicale
   port_map: "5232"
