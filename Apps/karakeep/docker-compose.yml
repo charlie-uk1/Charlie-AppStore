@@ -15,6 +15,8 @@ services:
       - MEILI_ADDR=http://karakeep-meili:7700
       - BROWSER_WEB_URL=http://karakeep-chrome:9222
       - DATA_DIR=/data
+      - DISABLE_SIGNUPS=false  #change to true after first signup
+      - OPENAI_API_KEY=sk-your-actual-key-here  #add your OpenAI Key here
 
   karakeep-chrome:
     container_name: karakeep-chrome
