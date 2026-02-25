@@ -1,18 +1,17 @@
 name: whoogle-search
 services:
   whoogle-search:
-    container_name: whoogle
+    container_name: whoogle-search
     image: benbusby/whoogle-search:latest
     restart: unless-stopped
     network_mode: bridge
     ports:
-      - target: 5000
-        published: "9005"
-        protocol: tcp
+      - 9005:5000
     cap_drop:
       - ALL
     security_opt:
       - no-new-privileges
+    user: whoogle
     tmpfs:
       - /config/:size=10M,uid=927,gid=927,mode=1700
       - /var/lib/tor/:size=15M,uid=927,gid=927,mode=1700
@@ -21,21 +20,19 @@ services:
       resources:
         limits:
           memory: 8146374656
-    labels:
-      icon: https://i.ibb.co/M7MkCPQ/whoogle.png
-
 x-casaos:
   architectures:
     - amd64
     - arm64
   main: whoogle-search
-  title:
-    en_us: Whoogle Search
-  tagline:
-    en_us: Privacy-respecting metasearch engine
   description:
-    en_us: A self-hosted, ad-free, privacy-respecting metasearch engine.
+    en_us: Whoogle - A self-hosted, ad-free, privacy-respecting metasearch engine
+  tagline:
+    en_us: Whoogle - A self-hosted, ad-free, privacy-respecting metasearch engine
   developer: Ben Busby
   icon: https://i.ibb.co/M7MkCPQ/whoogle.png
+  thumbnail: ""
+  title:
+    en_us: Whoogle
   category: Charlie
   port_map: "9005"
