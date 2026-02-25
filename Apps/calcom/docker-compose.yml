@@ -41,7 +41,7 @@ x-casaos:
   description:
     en_us: "Open-source scheduling infrastructure. A self-hosted alternative to Calendly."
   developer: Cal.com, Inc.
-  icon: https://cal.com/logo.svg
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/cal-com-light.png
   tagline:
     en_us: "Scheduling for everyone."
   title:
