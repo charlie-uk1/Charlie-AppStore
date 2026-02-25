@@ -1,7 +1,7 @@
-name: onlyoffice-docspace
+name: docspace
 services:
-  docspace:
-    container_name: onlyoffice-docspace
+  docspace-app: # This is the service name
+    container_name: docspace-app
     image: onlyoffice/docspace:latest
     restart: unless-stopped
     ports:
@@ -18,13 +18,13 @@ services:
 x-casaos:
   architectures:
     - amd64
-  main: onlyoffice-docspace
+  main: docspace-app # This MUST match the service name above exactly
   title:
     en_us: ONLYOFFICE DocSpace
   tagline:
     en_us: Full Office Room & File Management System.
   description:
-    en_us: A complete document collaboration platform. Unlike Docs, DocSpace includes a file manager, user accounts, and "rooms" to organize your work. Perfect for standalone use without Nextcloud.
+    en_us: A complete document collaboration platform. Unlike Docs, DocSpace includes a file manager, user accounts, and rooms.
   developer: ONLYOFFICE
   icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/onlyoffice.png
   category: Charlie
