@@ -36,7 +36,7 @@ x-casaos:
   description:
     en_us: "A lightweight CalDAV (calendar) and CardDAV (contact) server. Simple to use and compatible with most phones and computers."
   developer: Radicale Team
-  icon: https://raw.githubusercontent.com/Kozea/Radicale/master/radicale/web/static/icon.png
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/radicale.png
   tagline:
     en_us: "Simple CalDAV and CardDAV server."
   title:
