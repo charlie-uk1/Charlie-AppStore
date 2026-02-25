@@ -5,11 +5,11 @@ services:
     container_name: calcom
     restart: always
     ports:
-      - "3000:3000"
+      - "3010:3000"
     environment:
       - NODE_ENV=production
       - DATABASE_URL=postgresql://calcom:calcom_password@calcom-db:5432/calcom
-      - NEXT_PUBLIC_WEBAPP_URL=http://localhost:3000
+      - NEXT_PUBLIC_WEBAPP_URL=http://localhost:3010
       - NEXTAUTH_SECRET=changeme_at_least_32_chars_long
       - CALENDSO_ENCRYPTION_KEY=changeme_exactly_24_chars_long
     depends_on:
@@ -46,4 +46,4 @@ x-casaos:
     en_us: "Scheduling for everyone."
   title:
     en_us: Cal.com
-  port_map: "3000"
+  port_map: "3010"
