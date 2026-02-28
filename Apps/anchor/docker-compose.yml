@@ -12,6 +12,7 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Etc/UTC # Change to your timezone
+      - USER_SIGNUP=enabled # Change to disabled to turn off signups
     x-casaos:
       ports:
         - container: "2997"
